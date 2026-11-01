@@ -11,7 +11,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "https://notes-app-m96c.onrender.com//inputdata",
+      "https://notes-app-m96c.onrender.com/inputdata",
       {
         title: title,
         description: description

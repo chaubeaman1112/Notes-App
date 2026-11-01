@@ -14,7 +14,7 @@ const Allnotes = () => {
 
   useEffect(() => {
     axios
-      .get("https://notes-app-m96c.onrender.com//getnotes")
+      .get("https://notes-app-m96c.onrender.com/getnotes")
       .then((res) => {
         setNotes(res.data.Datas);
       })
@@ -51,7 +51,7 @@ const Allnotes = () => {
     try {
       setLoading(true);
 
-      await axios.patch(`https://notes-app-m96c.onrender.com//${id}`, {
+      await axios.patch(`https://notes-app-m96c.onrender.com/${id}`, {
         title: editTitle,
         description: editDescription,
       });
