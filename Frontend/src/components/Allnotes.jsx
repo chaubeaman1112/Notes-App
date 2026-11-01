@@ -14,7 +14,7 @@ const Allnotes = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/getnotes")
+      .get("https://notes-app-m96c.onrender.com//getnotes")
       .then((res) => {
         setNotes(res.data.Datas);
       })
@@ -25,7 +25,7 @@ const Allnotes = () => {
 
   function deletecard(id) {
     axios
-      .delete(`http://localhost:3000/${id}`)
+      .delete(`https://notes-app-m96c.onrender.com/${id}`)
       .then(() => {
         setNotes((prevNotes) =>
           prevNotes.filter((note) => note._id !== id)
@@ -51,7 +51,7 @@ const Allnotes = () => {
     try {
       setLoading(true);
 
-      await axios.patch(`http://localhost:3000/${id}`, {
+      await axios.patch(`https://notes-app-m96c.onrender.com//${id}`, {
         title: editTitle,
         description: editDescription,
       });
